@@ -1,0 +1,13 @@
+PS2SDK and tools from PS2DEV.
+
+containt:
+.gskit
+.ps2-packer
+.ps2client
+.ps2eth
+.ps2gdb
+.ps2sdk
+.ps2sdk-ports
+.ps2toolchain
+
+You can install it from "openDevScript" available on my github.
