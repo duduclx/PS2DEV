@@ -1,15 +1,8 @@
 #!/bin/sh
 # gcc-3.2.2-stage1.sh by Dan Peori (danpeori@oopo.net)
 
- ## Download the source code.
- SOURCE=https://github.com/downloads/ps2dev/ps2toolchain/gcc-3.2.2.tar.bz2
- wget --continue --no-check-certificate $SOURCE || { exit 1; }
-
- ## Unpack the source code.
- rm -Rf gcc-3.2.2 && tar xfvj gcc-3.2.2.tar.bz2 || { exit 1; }
-
  ## Enter the source directory and patch the source code.
- cd gcc-3.2.2 && cat ../../patches/gcc-3.2.2-PS2.patch | patch -p1 || { exit 1; }
+ cd $BUILDDIR/soft/gcc-3.2.2 && cat ../../patches/gcc-3.2.2-PS2.patch | patch -p1 || { exit 1; }
 
  ## For each target...
  for TARGET in "ee" "iop"; do
